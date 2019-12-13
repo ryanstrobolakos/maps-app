@@ -1,5 +1,4 @@
 var map;
-var coords = {lat: 39.9612, lng: -82.9988};
 function initMap() {
     map = new google.maps.Map(document.getElementById('map'), {
         center: coords,
@@ -16,7 +15,7 @@ function initMap() {
         animation: google.maps.Animation.BOUNCE
     });
     
-    var contentString = '<h2>Columbus, OH</h2> <p>Where your dreams come true.</p>';
+    var contentString = '<h2>' + city + ', ' + state + '</h2>';
 
     var infowindow = new google.maps.InfoWindow({
       content: contentString
