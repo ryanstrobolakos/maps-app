@@ -11,13 +11,13 @@ public class MapController {
 	@Autowired
 	private MapService mapService;
 	
-	@GetMapping("/home")
+	@GetMapping("/")
 	public String getDefaultMap(Model model) {
 	    model.addAttribute(new Location());
 	    return "index.html";
 	}
 	
-	@PostMapping("/home")
+	@PostMapping("/")
 	public String getMapForLocation(Location location, Model model) {
 	    mapService.addCoordinates(location);
 	    model.addAttribute(location);
